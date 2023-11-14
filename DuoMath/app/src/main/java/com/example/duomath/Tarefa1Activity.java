@@ -40,7 +40,19 @@ public class Tarefa1Activity extends AppCompatActivity {
                 Integer[] alternativas = {resposta - 1, resposta + 1, resposta, resposta, resposta + 2};
 
                 r1.setText(alternativas[new Random().nextInt(4)]);
+                r2.setText(alternativas[new Random().nextInt(4)]);
+                r3.setText(alternativas[new Random().nextInt(4)]);
+                r4.setText(alternativas[new Random().nextInt(4)]);
 
+                while(r2.getText() == r1.getText() || r2.getText() == r3.getText() || r2.getText() == r4.getText()){
+                    r2.setText(alternativas[new Random().nextInt(4)]);
+                }
+                while(r3.getText() == r1.getText() || r2.getText() == r3.getText() || r2.getText() == r4.getText()){
+                    r3.setText(alternativas[new Random().nextInt(4)]);
+                }
+                while(r4.getText() == r1.getText() || r4.getText() == r3.getText() || r4.getText() == r4.getText()){
+                    r4.setText(alternativas[new Random().nextInt(4)]);
+                }
 
 
                 txtTermo1.setText(Integer.toString(termo1));
