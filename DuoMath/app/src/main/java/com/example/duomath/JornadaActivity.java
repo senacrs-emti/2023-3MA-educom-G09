@@ -20,6 +20,14 @@ public class JornadaActivity extends AppCompatActivity {
         btnBasico.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                Intent telaTarefa = new Intent(getApplicationContext(), Tarefa1Activity.class);
+                startActivity(telaTarefa);
+            }
+        });
+        btnVoltar = findViewById(R.id.btnVoltar);
+        btnVoltar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
                 Intent telaMain = new Intent(getApplicationContext(), MainActivity.class);
                 startActivity(telaMain);
             }

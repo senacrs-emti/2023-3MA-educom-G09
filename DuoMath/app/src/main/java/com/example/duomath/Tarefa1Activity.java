@@ -39,6 +39,10 @@ public class Tarefa1Activity extends AppCompatActivity {
 
                 Integer[] alternativas = {resposta - 1, resposta + 1, resposta, resposta, resposta + 2};
 
+                r1.setText(alternativas[new Random().nextInt(4)]);
+
+
+
                 txtTermo1.setText(Integer.toString(termo1));
                 txtTermo2.setText(Integer.toString(termo2));
                 txtResp.setText(" = X");
