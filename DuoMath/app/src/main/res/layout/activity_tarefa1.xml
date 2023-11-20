@@ -4,7 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Tarefa1Activity">
+    tools:context=".Tarefa1Activity"
+    android:background="@color/white">
+
 
     <Button
         android:id="@+id/btnVoltar"
@@ -12,6 +14,7 @@
         android:layout_height="70dp"
         android:backgroundTint="@color/buttonsCollor"
         android:text="Voltar"
+        android:textColor="@color/white"
         android:textSize="15sp"
         app:cornerRadius="30dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -28,6 +31,7 @@
         android:backgroundTint="@color/buttonsCollor"
         android:text="r4"
         android:textSize="30sp"
+        android:textColor="@color/white"
         app:cornerRadius="30dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -43,6 +47,7 @@
         android:backgroundTint="@color/buttonsCollor"
         android:text="r3"
         android:textSize="30sp"
+        android:textColor="@color/white"
         app:cornerRadius="30dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -57,6 +62,7 @@
         android:layout_height="100dp"
         android:backgroundTint="@color/buttonsCollor"
         android:text="r2"
+        android:textColor="@color/white"
         android:textSize="30sp"
         app:cornerRadius="30dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -72,6 +78,7 @@
         android:layout_height="100dp"
         android:backgroundTint="@color/buttonsCollor"
         android:text="r1"
+        android:textColor="@color/white"
         android:textSize="30sp"
         app:cornerRadius="30dp"
         app:layout_constraintBottom_toBottomOf="parent"

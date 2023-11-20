@@ -19,10 +19,12 @@ public class Tarefa1Activity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tarefa1);
 
+
         r1 = findViewById(R.id.resp1);
         r2 = findViewById(R.id.resp2);
         r3 = findViewById(R.id.resp3);
         r4 = findViewById(R.id.resp4);
+
 
         txtTermo1 = findViewById(R.id.txtTermo1);
         txtTermo2 = findViewById(R.id.txtTermo2);
@@ -31,34 +33,45 @@ public class Tarefa1Activity extends AppCompatActivity {
 
         Integer questionType = new Random().nextInt(1);
 
+
         switch(questionType){
             case 0:
-                Integer termo1 = new Random().nextInt(26);
-                Integer termo2 = new Random().nextInt(26);
-                Integer resposta = termo1 + termo2;
+                int termo1 = new Random().nextInt(26);
+                int termo2 = new Random().nextInt(26);
+                int resposta = termo1 + termo2;
 
-                Integer[] alternativas = {resposta - 1, resposta + 1, resposta, resposta, resposta + 2};
+                Integer[] alternativas = {resposta - 1, resposta + 1, resposta, resposta + 2};
 
-                r1.setText(alternativas[new Random().nextInt(4)]);
-                r2.setText(alternativas[new Random().nextInt(4)]);
-                r3.setText(alternativas[new Random().nextInt(4)]);
-                r4.setText(alternativas[new Random().nextInt(4)]);
+
+
+                r1.setText(Integer.toString(alternativas[new Random().nextInt(4)]));
+                r2.setText(Integer.toString(alternativas[new Random().nextInt(4)]));
+                r3.setText(Integer.toString(alternativas[new Random().nextInt(4)]));
+                r4.setText(Integer.toString(alternativas[new Random().nextInt(4)]));
+
 
                 while(r2.getText() == r1.getText() || r2.getText() == r3.getText() || r2.getText() == r4.getText()){
-                    r2.setText(alternativas[new Random().nextInt(4)]);
+                    r2.setText(Integer.toString(alternativas[new Random().nextInt(4)]));
                 }
                 while(r3.getText() == r1.getText() || r2.getText() == r3.getText() || r2.getText() == r4.getText()){
-                    r3.setText(alternativas[new Random().nextInt(4)]);
-                }
-                while(r4.getText() == r1.getText() || r4.getText() == r3.getText() || r4.getText() == r4.getText()){
-                    r4.setText(alternativas[new Random().nextInt(4)]);
+                    r3.setText(Integer.toString(alternativas[new Random().nextInt(4)]));
                 }
 
+                while(r4.getText() == r1.getText() || r4.getText() == r2.getText() || r4.getText() == r3.getText()){
+                    r4.setText(Integer.toString(alternativas[new Random().nextInt(4)]));
+                }
 
-                txtTermo1.setText(Integer.toString(termo1));
-                txtTermo2.setText(Integer.toString(termo2));
+                String termo1txt = Integer.toString(termo1);
+                String termo2txt = Integer.toString(termo2);
+
+
+                txtTermo1.setText(termo1txt);
+                txtTermo2.setText(termo2txt);
                 txtResp.setText(" = X");
                 txtOp.setText(" + ");
+
+
+
 
 
 

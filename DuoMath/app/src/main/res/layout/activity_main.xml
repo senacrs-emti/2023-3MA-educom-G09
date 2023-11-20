@@ -13,6 +13,7 @@
         android:layout_height="80dp"
         android:backgroundTint="@color/buttonsCollor"
         android:text="Jornada 1"
+        android:textColor="@color/white"
         android:textSize="20sp"
         app:cornerRadius="30dp"
         app:layout_constraintBottom_toBottomOf="parent"
