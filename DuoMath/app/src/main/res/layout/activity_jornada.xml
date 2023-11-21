@@ -28,7 +28,7 @@
         android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Progresso (0%)"
+        android:text="Progresso"
         android:textAlignment="center"
         android:textColor="@color/buttonsCollor"
         android:textSize="25sp"
@@ -50,7 +50,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
     <Button
-        android:id="@+id/btnVoltar"
+        android:id="@+id/btnNext"
         android:layout_width="100dp"
         android:layout_height="70dp"
         android:backgroundTint="@color/buttonsCollor"
@@ -69,7 +69,7 @@
         android:id="@+id/button5"
         android:layout_width="240dp"
         android:layout_height="70dp"
-        android:backgroundTint="@color/buttonsCollor"
+        android:backgroundTint="@color/cinza"
         android:text="Intermediário"
         android:textColor="@color/white"
         android:textSize="20sp"
@@ -85,7 +85,7 @@
         android:id="@+id/button6"
         android:layout_width="240dp"
         android:layout_height="70dp"
-        android:backgroundTint="@color/buttonsCollor"
+        android:backgroundTint="@color/cinza"
         android:text="Avançado"
         android:textColor="@color/white"
         android:textSize="20sp"

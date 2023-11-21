@@ -27,7 +27,7 @@ public class JornadaActivity extends AppCompatActivity {
 
 
 
-        btnVoltar = findViewById(R.id.btnVoltar);
+        btnVoltar = findViewById(R.id.btnNext);
         btnVoltar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

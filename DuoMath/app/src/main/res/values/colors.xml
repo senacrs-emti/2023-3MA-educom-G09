@@ -9,5 +9,7 @@
     <color name="white">#FFFFFFFF</color>
     <color name="simplebackgroundcolor">#FFF9F9</color>
     <color name="buttonsCollor">#FF0051</color>
+    <color name="cinza">#787878</color>
+
 
 </resources>

@@ -12,8 +12,9 @@ import java.util.Random;
 
 public class Tarefa1Activity extends AppCompatActivity {
 
-    Button r1, r2, r3, r4, btnVoltar;
+    Button r1, r2, r3, r4, btnVoltar, btnNext;
     TextView txtTermo1, txtTermo2, txtOp, txtResp;
+    boolean respondido = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,7 +33,7 @@ public class Tarefa1Activity extends AppCompatActivity {
         txtOp = findViewById(R.id.txtOp);
         txtResp = findViewById(R.id.txtResp);
 
-        Integer questionType = new Random().nextInt(3);
+        int questionType = new Random().nextInt(3);
 
         int termo1 = new Random().nextInt(26);
         int termo2 = new Random().nextInt(26);
@@ -102,8 +103,10 @@ public class Tarefa1Activity extends AppCompatActivity {
         r1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                respondido = true;
+                btnNext.setBackgroundColor(Color.parseColor("#FFFF0051"));
                 if(r1.getText() == finalResposta){
-                    r1.setBackgroundColor(Color.GREEN);
+                    r1.setBackgroundColor(Color.parseColor("#07DB40"));
                 }else{
 
                 }
@@ -112,8 +115,10 @@ public class Tarefa1Activity extends AppCompatActivity {
         r2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                respondido = true;
+                btnNext.setBackgroundColor(Color.parseColor("#FFFF0051"));
                 if(r2.getText() == finalResposta){
-                    r2.setBackgroundColor(Color.GREEN);
+                    r2.setBackgroundColor(Color.parseColor("#07DB40"));
 
                 }else{
 
@@ -123,8 +128,10 @@ public class Tarefa1Activity extends AppCompatActivity {
         r3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                respondido = true;
+                btnNext.setBackgroundColor(Color.parseColor("#FFFF0051"));
                 if(r3.getText() == finalResposta){
-                    r3.setBackgroundColor(Color.GREEN);
+                    r3.setBackgroundColor(Color.parseColor("#07DB40"));
 
                 }else{
 
@@ -134,13 +141,17 @@ public class Tarefa1Activity extends AppCompatActivity {
         r4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                respondido = true;
+                btnNext.setBackgroundColor(Color.parseColor("#FFFF0051"));
                 if(r4.getText() == finalResposta){
-                    r4.setBackgroundColor(Color.GREEN);
+                    r4.setBackgroundColor(Color.parseColor("#07DB40"));
                 }else{
 
                 }
             }
         });
+
+
 
         btnVoltar = findViewById(R.id.btnVoltar);
         btnVoltar.setOnClickListener(new View.OnClickListener() {
@@ -150,6 +161,18 @@ public class Tarefa1Activity extends AppCompatActivity {
                 startActivity(telaJornada);
             }
         });
+        btnNext = findViewById(R.id.btnNext);
+        btnNext.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if(respondido){
+                    Intent telaTarefa = new Intent(getApplicationContext(),Tarefa1Activity.class);
+                    startActivity(telaTarefa);
+                }
+
+            }
+        });
+
 
 
     }
