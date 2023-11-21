@@ -3,6 +3,7 @@ package com.example.duomath;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -31,35 +32,16 @@ public class Tarefa1Activity extends AppCompatActivity {
         txtOp = findViewById(R.id.txtOp);
         txtResp = findViewById(R.id.txtResp);
 
-        Integer questionType = new Random().nextInt(1);
+        Integer questionType = new Random().nextInt(3);
 
+        int termo1 = new Random().nextInt(26);
+        int termo2 = new Random().nextInt(26);
+        int resposta = 0;
 
         switch(questionType){
             case 0:
-                int termo1 = new Random().nextInt(26);
-                int termo2 = new Random().nextInt(26);
-                int resposta = termo1 + termo2;
 
-                Integer[] alternativas = {resposta - 1, resposta + 1, resposta, resposta + 2};
-
-
-
-                r1.setText(Integer.toString(alternativas[new Random().nextInt(4)]));
-                r2.setText(Integer.toString(alternativas[new Random().nextInt(4)]));
-                r3.setText(Integer.toString(alternativas[new Random().nextInt(4)]));
-                r4.setText(Integer.toString(alternativas[new Random().nextInt(4)]));
-
-
-                while(r2.getText() == r1.getText() || r2.getText() == r3.getText() || r2.getText() == r4.getText()){
-                    r2.setText(Integer.toString(alternativas[new Random().nextInt(4)]));
-                }
-                while(r3.getText() == r1.getText() || r2.getText() == r3.getText() || r2.getText() == r4.getText()){
-                    r3.setText(Integer.toString(alternativas[new Random().nextInt(4)]));
-                }
-
-                while(r4.getText() == r1.getText() || r4.getText() == r2.getText() || r4.getText() == r3.getText()){
-                    r4.setText(Integer.toString(alternativas[new Random().nextInt(4)]));
-                }
+                resposta = termo1 + termo2;
 
                 String termo1txt = Integer.toString(termo1);
                 String termo2txt = Integer.toString(termo2);
@@ -69,23 +51,96 @@ public class Tarefa1Activity extends AppCompatActivity {
                 txtTermo2.setText(termo2txt);
                 txtResp.setText(" = X");
                 txtOp.setText(" + ");
-
-
-
-
-
-
                 break;
             case 1:
+                resposta = termo1 - termo2;
 
+                termo1txt = Integer.toString(termo1);
+                termo2txt = Integer.toString(termo2);
+
+
+                txtTermo1.setText(termo1txt);
+                txtTermo2.setText(termo2txt);
+                txtResp.setText(" = X");
+                txtOp.setText(" - ");
                 break;
             case 2:
+                termo2 = new Random().nextInt(10) + 1;
+                resposta = termo1 * termo2;
 
-                break;
-            case 3:
+                termo1txt = Integer.toString(termo1);
+                termo2txt = Integer.toString(termo2);
 
+
+                txtTermo1.setText(termo1txt);
+                txtTermo2.setText(termo2txt);
+                txtResp.setText(" = X");
+                txtOp.setText(" * ");
                 break;
         }
+
+        Integer[] alternativas = {resposta - 1, resposta + 1, resposta, resposta + 2};;
+
+        r1.setText(Integer.toString(alternativas[new Random().nextInt(4)]));
+        r2.setText(Integer.toString(alternativas[new Random().nextInt(4)]));
+        r3.setText(Integer.toString(alternativas[new Random().nextInt(4)]));
+        r4.setText(Integer.toString(alternativas[new Random().nextInt(4)]));
+
+
+        while(r2.getText() == r1.getText() || r2.getText() == r3.getText() || r2.getText() == r4.getText()){
+            r2.setText(Integer.toString(alternativas[new Random().nextInt(4)]));
+        }
+        while(r3.getText() == r1.getText() || r2.getText() == r3.getText() || r2.getText() == r4.getText()){
+            r3.setText(Integer.toString(alternativas[new Random().nextInt(4)]));
+        }
+
+        while(r4.getText() == r1.getText() || r4.getText() == r2.getText() || r4.getText() == r3.getText()){
+            r4.setText(Integer.toString(alternativas[new Random().nextInt(4)]));
+        }
+
+        String finalResposta = Integer.toString(resposta);
+        r1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if(r1.getText() == finalResposta){
+                    r1.setBackgroundColor(Color.GREEN);
+                }else{
+
+                }
+            }
+        });
+        r2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if(r2.getText() == finalResposta){
+                    r2.setBackgroundColor(Color.GREEN);
+
+                }else{
+
+                }
+            }
+        });
+        r3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if(r3.getText() == finalResposta){
+                    r3.setBackgroundColor(Color.GREEN);
+
+                }else{
+
+                }
+            }
+        });
+        r4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if(r4.getText() == finalResposta){
+                    r4.setBackgroundColor(Color.GREEN);
+                }else{
+
+                }
+            }
+        });
 
         btnVoltar = findViewById(R.id.btnVoltar);
         btnVoltar.setOnClickListener(new View.OnClickListener() {
