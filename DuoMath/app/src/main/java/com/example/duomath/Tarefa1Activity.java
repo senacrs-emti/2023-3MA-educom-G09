@@ -66,7 +66,7 @@ public class Tarefa1Activity extends AppCompatActivity {
                 txtOp.setText(" - ");
                 break;
             case 2:
-                termo2 = new Random().nextInt(10) + 1;
+                termo2 = new Random().nextInt(4) + 1;
                 resposta = termo1 * termo2;
 
                 termo1txt = Integer.toString(termo1);
@@ -80,7 +80,7 @@ public class Tarefa1Activity extends AppCompatActivity {
                 break;
         }
 
-        Integer[] alternativas = {resposta - 1, resposta + 1, resposta, resposta + 2};;
+        Integer[] alternativas = {resposta - (new Random().nextInt(5)+1), resposta + (new Random().nextInt(5)+1), resposta, new Random().nextInt(100)};
 
         r1.setText(Integer.toString(alternativas[new Random().nextInt(4)]));
         r2.setText(Integer.toString(alternativas[new Random().nextInt(4)]));

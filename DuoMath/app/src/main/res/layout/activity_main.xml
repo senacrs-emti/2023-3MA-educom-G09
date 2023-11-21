@@ -12,7 +12,7 @@
         android:layout_width="240dp"
         android:layout_height="80dp"
         android:backgroundTint="@color/buttonsCollor"
-        android:text="Jornada 1"
+        android:text="Operações básicas"
         android:textColor="@color/white"
         android:textSize="20sp"
         app:cornerRadius="30dp"
