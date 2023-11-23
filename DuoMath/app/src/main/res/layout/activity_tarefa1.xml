@@ -14,8 +14,9 @@
         android:layout_height="70dp"
         android:backgroundTint="@color/cinza"
         android:text="Proxima"
+        android:autoSizeTextType="uniform"
+        android:autoSizeMaxTextSize="13dp"
         android:textColor="@color/white"
-        android:textSize="15sp"
         app:cornerRadius="30dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -117,22 +118,23 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/txtTermo2"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.242" />
+        app:layout_constraintVertical_bias="0.253" />
 
     <TextView
-        android:id="@+id/txtOp"
+        android:id="@+id/txtTermo1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="+ "
+        android:text="X "
         android:textAlignment="center"
         android:textColor="@color/black"
         android:textSize="45sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.443"
+        app:layout_constraintEnd_toStartOf="@+id/txtOp"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.242" />
+        app:layout_constraintVertical_bias="0.253" />
 
     <TextView
         android:id="@+id/txtTermo2"
@@ -147,23 +149,22 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/txtOp"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.242" />
+        app:layout_constraintVertical_bias="0.253" />
 
     <TextView
-        android:id="@+id/txtTermo1"
+        android:id="@+id/txtOp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="X  "
+        android:text="+ "
         android:textAlignment="center"
         android:textColor="@color/black"
         android:textSize="45sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/txtOp"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.43"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.242" />
+        app:layout_constraintVertical_bias="0.253" />
 
     <TextView
         android:id="@+id/textView6"

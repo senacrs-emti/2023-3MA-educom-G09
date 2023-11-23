@@ -100,6 +100,9 @@ public class Tarefa1Activity extends AppCompatActivity {
         }
 
         String finalResposta = Integer.toString(resposta);
+
+        Button[] respostas = {r1,r2,r3,r4};
+
         r1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -107,8 +110,18 @@ public class Tarefa1Activity extends AppCompatActivity {
                 btnNext.setBackgroundColor(Color.parseColor("#FFFF0051"));
                 if(r1.getText() == finalResposta){
                     r1.setBackgroundColor(Color.parseColor("#07DB40"));
+                    r2.setBackgroundColor(Color.parseColor("#787878"));
+                    r3.setBackgroundColor(Color.parseColor("#787878"));
+                    r4.setBackgroundColor(Color.parseColor("#787878"));
                 }else{
-
+                    r1.setBackgroundColor(Color.parseColor("#787878"));
+                    for(int i = 0; i <= 3; i++){
+                        if(respostas[i].getText() != finalResposta){
+                            respostas[i].setBackgroundColor(Color.parseColor("#787878"));
+                        }else{
+                            respostas[i].setBackgroundColor(Color.parseColor("#07DB40"));
+                        }
+                    }
                 }
             }
         });
@@ -119,9 +132,19 @@ public class Tarefa1Activity extends AppCompatActivity {
                 btnNext.setBackgroundColor(Color.parseColor("#FFFF0051"));
                 if(r2.getText() == finalResposta){
                     r2.setBackgroundColor(Color.parseColor("#07DB40"));
+                    r1.setBackgroundColor(Color.parseColor("#787878"));
+                    r3.setBackgroundColor(Color.parseColor("#787878"));
+                    r4.setBackgroundColor(Color.parseColor("#787878"));
 
                 }else{
-
+                    r2.setBackgroundColor(Color.parseColor("#787878"));
+                    for(int i = 0; i <= 3; i++){
+                        if(respostas[i].getText() != finalResposta){
+                            respostas[i].setBackgroundColor(Color.parseColor("#787878"));
+                        }else{
+                            respostas[i].setBackgroundColor(Color.parseColor("#07DB40"));
+                        }
+                    }
                 }
             }
         });
@@ -132,9 +155,19 @@ public class Tarefa1Activity extends AppCompatActivity {
                 btnNext.setBackgroundColor(Color.parseColor("#FFFF0051"));
                 if(r3.getText() == finalResposta){
                     r3.setBackgroundColor(Color.parseColor("#07DB40"));
+                    r1.setBackgroundColor(Color.parseColor("#787878"));
+                    r2.setBackgroundColor(Color.parseColor("#787878"));
+                    r4.setBackgroundColor(Color.parseColor("#787878"));
 
                 }else{
-
+                    r3.setBackgroundColor(Color.parseColor("#787878"));
+                    for(int i = 0; i <= 3; i++){
+                        if(respostas[i].getText() != finalResposta){
+                            respostas[i].setBackgroundColor(Color.parseColor("#787878"));
+                        }else{
+                            respostas[i].setBackgroundColor(Color.parseColor("#07DB40"));
+                        }
+                    }
                 }
             }
         });
@@ -145,8 +178,18 @@ public class Tarefa1Activity extends AppCompatActivity {
                 btnNext.setBackgroundColor(Color.parseColor("#FFFF0051"));
                 if(r4.getText() == finalResposta){
                     r4.setBackgroundColor(Color.parseColor("#07DB40"));
+                    r1.setBackgroundColor(Color.parseColor("#787878"));
+                    r2.setBackgroundColor(Color.parseColor("#787878"));
+                    r3.setBackgroundColor(Color.parseColor("#787878"));
                 }else{
-
+                    r4.setBackgroundColor(Color.parseColor("#787878"));
+                    for(int i = 0; i <= 3; i++){
+                        if(respostas[i].getText() != finalResposta){
+                            respostas[i].setBackgroundColor(Color.parseColor("#787878"));
+                        }else{
+                            respostas[i].setBackgroundColor(Color.parseColor("#07DB40"));
+                        }
+                    }
                 }
             }
         });
